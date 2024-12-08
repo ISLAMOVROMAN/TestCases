@@ -1,4 +1,8 @@
-# Login Page Test Cases (Enhanced)
+# Login Page Test Cases
+
+Welcome to the **Login Page Test Cases**! This document contains a comprehensive collection of test cases for testing the functionality, security, and usability of a login page.
+
+---
 
 ## 📂 Test Cases Overview
 
@@ -6,7 +10,7 @@
 |--------|--------------------------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------------------------------------------------------------|--------------|
 | 1      | Verify that the cursor is focused on the "Username" text box on page load.                                   | Positive      | Cursor is automatically focused on the "Username" field upon page load.                                      | High         |
 | 2      | Verify that the login screen contains required elements (Username, Password, Sign-in button, etc.).          | Positive      | All specified elements are present and correctly displayed.                                                   | High         |
-| 3      | Verify that tab functionality works correctly for all form elements.                                        | Positive      | Focus moves sequentially through all form elements using the Tab key.                                         | Medium       |
+| 3      | Verify tab functionality across all form elements.                                                          | Positive      | Focus moves sequentially through all form elements using the Tab key.                                         | Medium       |
 | 4      | Verify that the Enter key works as a substitute for the Sign-in button.                                     | Positive      | Pressing Enter submits the form and initiates login.                                                          | High         |
 | 5      | Verify that Username and Password fields have meaningful placeholders.                                      | Positive      | Placeholders provide appropriate guidance (e.g., "Enter your username").                                       | Low          |
 | 6      | Verify that labels float upward when the text field is focused or filled (if applicable).                   | Positive      | Labels move upward and remain visible when fields are in focus or contain input.                              | Low          |
@@ -31,12 +35,16 @@
 
 ---
 
-## 💡 Key Improvements Added:
-- Included **Expected Results** and **Priorities** for clarity.
-- Enhanced security tests (e.g., SQL Injection, XSS, and sensitive information in the page source).
-- Expanded usability tests with focus on UX/UI elements (placeholders, floating labels).
-- Added detailed CAPTCHA tests for case sensitivity, refresh functionality, and audio support.
-- Reorganized the structure to align with best practices from [QA_Bible](https://vladislaveremeev.gitbook.io/qa_bible).
+## 💡 Key Improvements
+- Clear priorities and expected results for each test case.
+- Enhanced security checks for SQL Injection and XSS vulnerabilities.
+- Expanded usability tests for placeholders, floating labels, and tab functionality.
+- Included CAPTCHA functionality tests for accessibility and security.
+- Organized for readability and ease of execution.
 
 ---
 
+## 📄 How to Use
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/YourUsername/YourRepo.git
