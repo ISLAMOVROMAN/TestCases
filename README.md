@@ -8,7 +8,7 @@ Welcome to the **Test Cases Repository**! This project contains a comprehensive 
 
 | **Category**               | **Description**                                                   | **File Name**                                 |
 |----------------------------|-------------------------------------------------------------------|----------------------------------------------|
-| **API Testing**            | Verifies the functionality, performance, and security of APIs.   | [APITesting.csv](./APITesting.csv)           |
+| **API Testing**            | Verifies the functionality, performance, and security of APIs.   | [APITesting.csv](./Testcases/APITesting.csv)           |
 | **Accessibility Testing**  | Ensures applications are accessible to users with disabilities.  | [AccessibilityTesting.csv](./AccessibilityTesting.csv) |
 | **Basic Security Testing** | Covers basic security scenarios for web applications.            | [BasicSecurityTestCasesOfWebApplication.csv](./BasicSecurityTestCasesOfWebApplication.csv) |
 | **Compatibility Testing**  | Ensures software compatibility across environments and platforms.| [CompatibilityTesting.csv](./CompatibilityTesting.csv) |
