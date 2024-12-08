@@ -16,6 +16,6 @@ S.No.,Test Case,Type of Test Case (Positive / Negative),Remarks
 15,Verify that the added product is present on the wishlist page,Positive,
 16,Verify that user can add products in the wishlist,Positive,
 17,Verify that option to check the availability of the product is present,Positive,
-18,Verify that users can rate, review the product,Positive,
+18,Verify that users can rate and review the product,Positive,
 19,Verify that user can add products to the cart,Positive,
 20,"Verify that user price increases accordingly when a product is added multiple times.",Positive,
