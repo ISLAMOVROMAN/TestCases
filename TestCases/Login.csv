@@ -1,50 +1,42 @@
-# Login Page Test Cases
-
-Welcome to the **Login Page Test Cases**! This document contains a detailed collection of test cases for testing a login page's functionality, security, and usability. The test cases are categorized for better readability and efficiency.
-
----
+# Login Page Test Cases (Enhanced)
 
 ## 📂 Test Cases Overview
 
-| **ID** | **Test Case**                                                                                                    | **Type**       | **Expected Result**                                                                                           | **Priority** |
-|--------|----------------------------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------------------------------------------------------------|--------------|
-| 1      | Verify that cursor is focused on “Username” text box on the page load (login page).                            | Positive      | Cursor is focused on the "Username" field immediately after the page is loaded.                              | High         |
-| 2      | Verify that the login screen contains all required elements (Username, Password, Sign-in button, etc.).         | Positive      | All elements are present and displayed correctly.                                                             | High         |
-| 3      | Verify tab functionality across all input fields.                                                             | Positive      | Tab moves focus sequentially across elements in the correct order.                                           | Medium       |
-| 4      | Verify that Enter key works as a substitute for the Sign-in button.                                           | Positive      | Pressing Enter submits the form.                                                                              | High         |
-| 5      | Verify that Username and Password fields have a valid placeholder.                                            | Positive      | Placeholder text is present and provides useful guidance to the user.                                         | Medium       |
-| 6      | Verify that labels float upward when the text field is in focus or filled (if floating labels are used).       | Positive      | Labels move upward and remain visible when the field is in focus or filled.                                   | Medium       |
-| 7      | Verify that User can log in with valid credentials.                                                           | Positive      | User is successfully logged in and redirected to the home page.                                               | High         |
-| 8      | Verify that User cannot log in with invalid Username and Password.                                            | Negative      | User sees an appropriate error message.                                                                       | High         |
-| 9      | Verify that User cannot log in with a valid Username and invalid Password.                                    | Negative      | User sees an error message like "Invalid Password."                                                           | High         |
-| 10     | Verify that User cannot log in with invalid Username and valid Password.                                      | Negative      | User sees an error message like "User does not exist."                                                        | High         |
-| 11     | Verify that User cannot log in with blank Username or Password fields.                                        | Negative      | Validation message is displayed (e.g., "Username and Password cannot be blank").                              | High         |
-| 12     | Verify that User cannot log in with spaces as Username or Password.                                           | Negative      | Spaces are not accepted as valid input.                                                                       | High         |
-| 13     | Verify that User cannot log in with inactive credentials.                                                     | Negative      | User sees an error message indicating that their account is inactive.                                         | High         |
-| 14     | Verify that clicking the browser back button after a successful login does not log the User out.              | Negative      | User remains logged in.                                                                                       | Medium       |
-| 15     | Verify that clicking the browser back button after a successful logout does not log the User back in.         | Negative      | User remains logged out.                                                                                      | Medium       |
-| 16     | Verify the limit on the number of unsuccessful login attempts before lockout (depends on business logic).      | Negative      | After X invalid attempts, the User is either blocked or asked to complete CAPTCHA verification.               | High         |
-| 17     | Verify that the password is displayed as encrypted (masked) when entered.                                     | Positive      | Characters in the Password field are replaced with dots or asterisks.                                         | High         |
-| 18     | Verify that passwords cannot be deciphered if copied from the Password field.                                 | Positive      | Copy-pasted passwords remain encrypted.                                                                       | High         |
-| 19     | Verify that the login page is not vulnerable to SQL injection attacks.                                        | Negative      | SQL injection attempts are blocked, and an appropriate error is displayed.                                    | Critical     |
-| 20     | Verify that the login page is not vulnerable to Cross-Site Scripting (XSS).                                   | Negative      | XSS scripts are blocked, and no malicious content is executed.                                                | Critical     |
-| 21     | Verify the behavior of the "Remember Me" checkbox (default state depends on business logic).                  | Positive      | Checkbox is either selected or unselected by default, as per the business requirement.                        | Medium       |
-| 22     | Verify that CAPTCHA functionality works (case sensitivity, refresh, audio support).                           | Positive      | CAPTCHA works as intended: refreshes, supports audio, and validates user input.                               | High         |
-| 23     | Verify that the login form functions correctly across different browsers and devices.                         | Positive      | No rendering issues across browsers (Chrome, Firefox, Safari, etc.) and mobile devices.                       | High         |
-| 24     | Verify that the page source of the login form does not reveal sensitive information.                          | Negative      | No sensitive data (e.g., database structure, API keys) is visible in the page source.                         | High         |
+| **ID** | **Test Case**                                                                                                  | **Type**       | **Expected Result**                                                                                           | **Priority** |
+|--------|--------------------------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------------------------------------------------------------|--------------|
+| 1      | Verify that the cursor is focused on the "Username" text box on page load.                                   | Positive      | Cursor is automatically focused on the "Username" field upon page load.                                      | High         |
+| 2      | Verify that the login screen contains required elements (Username, Password, Sign-in button, etc.).          | Positive      | All specified elements are present and correctly displayed.                                                   | High         |
+| 3      | Verify that tab functionality works correctly for all form elements.                                        | Positive      | Focus moves sequentially through all form elements using the Tab key.                                         | Medium       |
+| 4      | Verify that the Enter key works as a substitute for the Sign-in button.                                     | Positive      | Pressing Enter submits the form and initiates login.                                                          | High         |
+| 5      | Verify that Username and Password fields have meaningful placeholders.                                      | Positive      | Placeholders provide appropriate guidance (e.g., "Enter your username").                                       | Low          |
+| 6      | Verify that labels float upward when the text field is focused or filled (if applicable).                   | Positive      | Labels move upward and remain visible when fields are in focus or contain input.                              | Low          |
+| 7      | Verify that the user can log in with valid credentials.                                                     | Positive      | Login is successful, and the user is redirected to the correct page.                                          | High         |
+| 8      | Verify that login fails with invalid Username and Password.                                                 | Negative      | Error message is displayed: "Invalid Username or Password."                                                   | High         |
+| 9      | Verify that login fails with a valid Username and invalid Password.                                         | Negative      | Error message is displayed: "Invalid Password."                                                               | High         |
+| 10     | Verify that login fails with an invalid Username and valid Password.                                        | Negative      | Error message is displayed: "Invalid Username."                                                               | High         |
+| 11     | Verify that login fails with blank Username or Password fields.                                             | Negative      | Validation error message: "Fields cannot be empty."                                                           | High         |
+| 12     | Verify that login fails when spaces are entered as Username or Password.                                    | Negative      | Spaces are trimmed or flagged as invalid input, and an error message is displayed.                            | Medium       |
+| 13     | Verify that login fails with inactive credentials.                                                          | Negative      | Error message: "Your account is inactive. Contact support."                                                   | Medium       |
+| 14     | Verify that clicking the browser back button after login does not log the user out.                         | Negative      | User remains logged in, and sensitive pages are not cached or accessible.                                     | Medium       |
+| 15     | Verify that clicking the browser back button after logout does not log the user back in.                    | Negative      | User remains logged out.                                                                                      | Medium       |
+| 16     | Verify that there is a limit on the number of unsuccessful login attempts.                                   | Negative      | After X failed attempts, either CAPTCHA is shown or the account is temporarily locked.                        | High         |
+| 17     | Verify that passwords entered in the Password field are encrypted (masked).                                 | Positive      | Password characters are replaced with dots or asterisks.                                                      | High         |
+| 18     | Verify that passwords copied from the Password field remain encrypted.                                       | Negative      | Copy-pasted passwords are not decipherable or remain encrypted.                                               | High         |
+| 19     | Verify that the login page is not vulnerable to SQL injection attacks.                                      | Negative      | SQL injection attempts fail with no sensitive data revealed, and an error is displayed.                       | Critical     |
+| 20     | Verify that the login page is not vulnerable to Cross-Site Scripting (XSS) attacks.                         | Negative      | XSS attempts are blocked; malicious scripts are not executed.                                                 | Critical     |
+| 21     | Verify CAPTCHA functionality, including refresh, case sensitivity, and audio support.                       | Positive      | CAPTCHA works as intended, providing accessibility and security.                                              | High         |
+| 22     | Verify that the user remains logged in after signing in, closing the browser, and reopening the application. | Positive      | User remains logged in (if "Keep me logged in" was selected).                                                 | Medium       |
+| 23     | Verify that invalid login attempts reveal no sensitive information in the page source.                      | Negative      | Sensitive information is not visible in the page source.                                                      | Critical     |
+| 24     | Verify that the login form functions correctly across different browsers and devices.                       | Positive      | No UI or functionality issues across major browsers (Chrome, Firefox, Safari, Edge) and mobile devices.       | High         |
 
 ---
 
-## 💡 Improvements Added
-- Enhanced organization by including IDs, priorities, and expected results.
-- Added security-related test cases (SQL Injection, XSS, sensitive information in page source).
-- Expanded UX/UI tests with placeholder validation, floating labels, and browser compatibility checks.
-- Included CAPTCHA testing with case sensitivity, audio support, and refresh functionality.
-- Structured the test cases to cover functional, negative, and security aspects systematically.
+## 💡 Key Improvements Added:
+- Included **Expected Results** and **Priorities** for clarity.
+- Enhanced security tests (e.g., SQL Injection, XSS, and sensitive information in the page source).
+- Expanded usability tests with focus on UX/UI elements (placeholders, floating labels).
+- Added detailed CAPTCHA tests for case sensitivity, refresh functionality, and audio support.
+- Reorganized the structure to align with best practices from [QA_Bible](https://vladislaveremeev.gitbook.io/qa_bible).
 
 ---
 
-## 📄 How to Use
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/YourUsername/YourRepo.git
